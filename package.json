@@ -4,13 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js"
+    "test": "cucumber-js -f @cucumber/pretty-formatter features/search.feature"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chai": "^4.3.7",
+    "selenium-webdriver": "^4.8.1"
+  },
+  "devDependencies": {
     "@cucumber/cucumber": "^9.0.0",
-    "chai": "^4.3.7"
+    "@cucumber/pretty-formatter": "^1.0.0"
   }
 }

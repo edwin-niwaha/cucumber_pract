@@ -1,10 +1,6 @@
-Feature: Calc
+Feature: Adding two number
 
-    Using BDD to perform calculations tests
+    Scenario: Adding two number
+        When I add 2 and 5
+        Then the result should be 7
 
-    Background: Operands
-        Given the numbers 12 and 6
-    
-    Example: Add
-        When they are added
-        Then result is 18

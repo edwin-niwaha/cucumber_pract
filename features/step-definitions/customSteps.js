@@ -1,12 +1,19 @@
-const {Given, When, Then} = require('@cucumber/cucumber');
-Given('the numbers {int} and {int}', function (int, int2) {
+const {When, Then, Before, After} = require('@cucumber/cucumber');
+const {expect} = require('chai');
 
-         });
+let sum = 0;
 
-When('they are added', function () {
+Before(function () {
+    console.log('Inside Before');
+  });
 
-});         
+After(function () {
+    console.log('Inside After');
+});
+When('I add {int} and {int}', function (num1, num2) {
+    sum = num1 + num2
+    });
 
-Then('result is {int}', function (int) {
-
-         });
+Then('the result should be {int}', function (result) {
+    expect(sum).equal(result)
+    });
